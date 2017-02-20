@@ -1,0 +1,48 @@
+.TH SHOWARGS 1 "February 20, 2017" "Jean-Marc Bourguet" "Jean-Marc Bourguet's Utilities"
+
+.SH NAME
+showargs \- display its arguments using C syntax
+
+.SH SYNOPSYS
+.B showargs
+[\|\fIOPTIONS\fR...\|] [\|\fIargument\fR...\|]
+
+.SH DESCRIPTION
+.B showargs
+print its argument with C syntax
+
+.SH OPTIONS
+
+.TP
+.B \-l
+use the locale to determine charset and printable character.
+
+.SH "EXAMPLES"
+
+Using an UTF-8 locale,
+
+.nf
+.B showargs déjà
+.fi
+
+Gives
+
+.nf
+ 1: "d\\0xC3\\0xA9j\\0xC3\\0xA0"
+.fi
+
+while
+
+.nf
+.B showargs -l déjà
+.fi
+
+Gives
+
+.nf
+ 1: L"-l"
+ 2: L"déjà"
+.fi
+
+.SH SEE ALSO
+.BR echo (1)

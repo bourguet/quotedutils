@@ -1,0 +1,7 @@
+*~
+#*#
+quotedutils/.git
+quotedutils/.gitignore
+quotedutils/.idea
+quotedutils/cmake-*
+quotedutils/excluded
